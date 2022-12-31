@@ -1,0 +1,11 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to bottom, white, rgb(157, 157, 157));
+    background-repeat: no-repeat;
+    height: 100%;
+    
+}
+body.active{
+    margin: 0; height: 100%; overflow: hidden;
+}

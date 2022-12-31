@@ -1,0 +1,135 @@
+*{
+    padding: 0 ;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+header{
+    height: 100vh;
+    
+}
+.logo{
+    width: clamp(0.8rem, 20vw, 7rem);
+
+}
+nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 2em;
+    height: 17vh;
+   
+    width: 100vw;
+    top: 0;
+    
+   
+    
+   
+   
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    width: 55%;
+    justify-content: space-around;
+    font-family: 'Karla', sans-serif;
+    
+}
+a{
+    text-decoration: none;
+    font-size: clamp(1.6rem, 2vw, 2.2rem);
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px black;
+   
+    position: relative;
+}
+a::after{
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    background-color: rgb(255, 255, 255);
+    height: .15em;
+    border-radius: 10px;
+    transition: .3s ease-in-out;
+}
+
+a:hover::after {
+    width: 100%;
+}
+.burger{
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: none;
+}
+
+.line{
+    width: 3em;
+    height: .3em;
+    background: rgb(255, 255, 255);
+    margin: .7em;
+    border-radius: 20px;
+    transition: .3s ease-in-out;
+}
+
+.u-n{
+    height: 100vh;
+    margin: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: clamp(2.3rem, 5vw, 4rem);
+    font-family: "Karla";
+    font-weight: bold;
+    color: rgb(38, 56, 76);
+    margin-top: -17vh;
+}
+
+@media screen and (max-width: 1000px){
+    nav{
+        justify-content: space-between;
+    }
+    .burger {
+        display: block;
+        transition: .3s ease-in-out;
+    }
+    .burger.active .line:first-child {
+        display: none;
+    }
+    .burger.active .line:nth-child(2){
+        transform: rotate(-405deg);
+    }
+    .burger.active .line:nth-child(2){
+        transform: translate(405deg);
+    }
+
+    ul{
+        position:fixed;
+        right: 0;
+        top: 17vh;
+        background: rgba(0, 0, 0, 0.5);
+        height: 83vh;
+        flex-direction: column;
+        text-align: center;
+        transform: translate(100%);
+        
+    }
+    ul.active{
+        transform: translate(0%);
+    }
+   
+}
+
+
+
+@media screen and (max-width: 1000px){
+    ul {
+        width: 100%;
+    }
+}
