@@ -1,0 +1,18 @@
+.k-article{
+    display: flex;
+    font-weight: bold;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(38, 56, 76);
+}
+.day{
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: rgb(16, 16, 16);
+   
+}
+.year{
+    font-size: clamp(2rem, 5vw, 4rem);
+}
+.month{
+    font-size: clamp(1.8rem, 3vw, 3.5rem);
+}

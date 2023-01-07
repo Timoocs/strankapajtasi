@@ -11,23 +11,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/koncerty.css">
+    <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/normalize.css">
-    <title>Moštenskí Pajtáši - Heligonkári z Horného Moštenca</title>
+    <link rel="stylesheet" href="./css/subsites/koncerty.css">
+    <title>Koncerty - Moštenskí Pajtáši</title>
 </head>
 <body>
     <header>
         <nav class="h-nav">
-            <a class="direct" href="./index.html">
+            <a class="" href="./index.html">
                 <img class="logo" src="./logo.png">
             </a>
             <ul>
-                <li><a href="#">Kontakt</a></li>
-                <li><a href="#">O nás</a></li>
-                <li><a href="https://www.youtube.com/@mostenskipajtasi9998">Videoklipy</a></li>
-                <li><a href="#">Koncerty</a></li>
-                <li><a href="#">E-shop</a></li>
+                
+                <li><a class="direct" href="kontakt.html">Kontakt</a></li>
+                <li><a class="direct" href="onas.html">O nás</a></li>
+                <li><a class="direct" href="https://www.youtube.com/@mostenskipajtasi9998">Videoklipy</a></li>
+                <li><a class="direct" href="koncerty.html">Koncerty</a></li>
+                <li><a class="direct" href="eshop.html">E-shop</a></li>
+              
+
+                <li class="header-socials">
+                    <a href="https://www.facebook.com/pajtasi/"><img class="socials-img" src="./img/icons8-facebook-96.png"></a>
+                    <a href="https://www.instagram.com/mostenskipajtasi/"><img class="socials-img" src="./img/icons8-instagram-96.png"></a>
+                    <a href="https://www.youtube.com/@mostenskipajtasi9998"><img class="socials-img" src="./img/icons8-youtube-squared-96.png"></a>
+                </li>
             
                 
             </ul>
@@ -40,6 +49,66 @@
             </button>
         </nav>
         <div class="u-n">
-            Naše koncerty
+            Koncerty
         </div>
     </header>
+    <main>
+        <div class="k-article">
+            <div class="year">2023</div>
+            <div class="month">Január</div>
+            <div class="day">O koncertoch vás budeme informovať</div>
+        </div>
+    </main>
+    <footer>
+        <div class="help">
+        <a href="./index.html">
+            <img class="logoftr" src="./logoft.png">
+        </a>
+    </div>
+        <div class="f-section">
+           
+        <div class="f-art">
+            <div class="ftritem">
+                Moštenskí Pajtáši
+            </div>
+            <div class="ftritem">
+                Jaroslav Briestensky
+            </div>
+        </div>
+            
+        <div class="f-art">
+           <div class="ftritem">
+                Tel.:
+            </div>
+            <div class="ftritem">
+                <a class="tel" href="tel:+421908597497">0908 597 497</a>
+            </div>
+        </div>
+        <div class="f-art">
+        <div class="ftritem">
+                E-mail:
+        </div>
+        <div class="ftritem">
+            jaroslavbriestensky@gmail.com
+        </div>
+    </div>
+                
+           
+                 
+            
+        </div>
+    
+    </footer>
+
+    <script>
+        const mobileNav = document.querySelector("ul");
+        const burgerBtn = document.querySelector(".burger");
+        const body = document.querySelector("body");
+
+        burgerBtn.addEventListener("click", function(){
+            mobileNav.classList.toggle("active");
+            body .classList.toggle("active");
+        })
+    </script>
+    </body>
+    </html>

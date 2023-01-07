@@ -4,14 +4,17 @@
     box-sizing: border-box;
 
 }
+
 header{
     height: 100vh;
     
 }
+
 .logo{
     width: clamp(0.8rem, 20vw, 7rem);
 
 }
+
 nav {
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
@@ -19,24 +22,26 @@ nav {
     align-items: center;
     padding: 2em;
     height: 17vh;
-   
     width: 100vw;
-    top: 0;
     
-   
-    
-   
-   
+  
 }
+
 ul{
+    
     list-style-type: none;
     display: flex;
-    width: 55%;
+    width: 100%;
+    
+    
     justify-content: space-around;
+    margin: 0 0 0 3rem;
     font-family: 'Karla', sans-serif;
+    align-items: center;
     
 }
-a{
+
+.direct{
     text-decoration: none;
     font-size: clamp(1.6rem, 2vw, 2.2rem);
     font-weight: bold;
@@ -91,7 +96,18 @@ a:hover::after {
     margin-top: -17vh;
 }
 
-@media screen and (max-width: 1000px){
+
+
+.header-socials{
+    display: flex;
+    justify-content: right;
+   
+}
+.socials-img{
+    width: clamp(3rem, 6vw, 5rem)
+}
+
+@media only screen and (max-width: 1000px){
     nav{
         justify-content: space-between;
     }
@@ -99,18 +115,11 @@ a:hover::after {
         display: block;
         transition: .3s ease-in-out;
     }
-    .burger.active .line:first-child {
-        display: none;
-    }
-    .burger.active .line:nth-child(2){
-        transform: rotate(-405deg);
-    }
-    .burger.active .line:nth-child(2){
-        transform: translate(405deg);
-    }
-
+   .burger.active .line:nth-child(2) {
+    opacity: 0;
+   }
     ul{
-        position:fixed;
+        position: fixed;
         right: 0;
         top: 17vh;
         background: rgba(0, 0, 0, 0.5);
